@@ -1,16 +1,12 @@
 let route = require('express').Router();
+let catQ = require('../store').catQueue;
 
-let testData = {
-  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-  imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-  name: 'Fluffy',
-  sex: 'Female',
-  age: 2,
-  breed: 'Bengal',
-  story: 'Thrown on the street'
-};
+
 module.exports  = route.get('/',(req,res)=>{
-
-  res.status(200).json(testData);
+  console.log(catQ.peek());
+  if(!catQ.peek())
+    return res.status(204).json({error:'no more dogs in the pound'});
+  else
+    return res.status(200).json(catQ.peek());
 
 });

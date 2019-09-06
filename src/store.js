@@ -14,29 +14,29 @@ pets:{
   {
     imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
-    sex: 'Male',
-    age: 3,
+    name: 'Sherlock',
+    sex: 'Female',
+    age: 5,
     breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    story: 'Owner in Jail'
   },
   {
     imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
+    name: 'Sonic',
     sex: 'Male',
     age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    breed: 'chocolate Retriever',
+    story: 'Owner digi-volved'
   },
   {
     imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
+    name: 'Posideon',
     sex: 'Male',
-    age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    age: 8,
+    breed: 'chuachua',
+    story: 'Moved to bottom of ocean'
   }],
   cats:[{
     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
@@ -50,29 +50,29 @@ pets:{
   {
     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
     imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
+    name: 'Neko',
     sex: 'Female',
     age: 2,
-    breed: 'Bengal',
-    story: 'Thrown on the street'
+    breed: 'Tabi',
+    story: 'Went super-sayian 3'
   },
   {
     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
     imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
+    name: 'Ahiri',
     sex: 'Female',
     age: 2,
     breed: 'Bengal',
-    story: 'Thrown on the street'
+    story: 'Became a "real boy"'
   },
   {
     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
     imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
-    sex: 'Female',
-    age: 2,
+    name: 'Ichigo',
+    sex: 'male',
+    age: 1,
     breed: 'Bengal',
-    story: 'Thrown on the street'
+    story: 'UnLocked banKai'
   }]
 }
 };
