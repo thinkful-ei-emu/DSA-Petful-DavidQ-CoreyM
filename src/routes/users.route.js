@@ -50,5 +50,5 @@ module.exports  = route.post('/',parse,(req,res)=>{// add user to queue
   }
   timer.refresh();
   console.log(catQ,userQueue);
-  return res.status(201).end();
+  return res.status(201).json({message:`You Adopted a ${pet}`});
 });
