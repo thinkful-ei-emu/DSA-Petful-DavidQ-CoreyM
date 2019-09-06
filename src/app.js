@@ -21,8 +21,16 @@ app.use((err, req, res, next)=>{
 });
 app.use(cors());
 app.use(morgan(morganOptions));
+//route imports
+let dogRoute = require('./routes/dog.route');
+let catRoute = require('./routes/cat.route');
+
+
+//routes
 app.get('/',(req,res)=>{
   res.status(200).send('Hello World');
 });
+app.use('/api/dog',dogRoute);
+app.use('/api/cat',catRoute);
 
 module.exports = app;
