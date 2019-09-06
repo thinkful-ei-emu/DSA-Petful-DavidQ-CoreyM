@@ -5,7 +5,8 @@ module.exports  = route.get('/',(req,res)=>{
   console.log(dogQueue.peek())
   if(!dogQueue.peek())
     return res.status(204).json({error:'no more dogs in the pound'});
-  else
+  else{
     return res.status(200).json(dogQueue.peek());
+  }
 
 });

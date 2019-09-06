@@ -1,3 +1,4 @@
+let fetch = require('node-fetch');
 let store={ users:[
 
 ],
@@ -85,8 +86,14 @@ const userQueue = new Queue();
 const dogQueue = new Queue();
 const catQueue = new Queue();
 for(let x = 0; x < 4;x++){
-  catQueue.enqueue(store.pets.cats[x]);
-  dogQueue.enqueue(store.pets.dogs[x]);
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(res=>res.json())
+    .then((dog)=>{
+      store.pets.dogs[x].imageURL = dog.message;
+      catQueue.enqueue(store.pets.cats[x]);
+      dogQueue.enqueue(store.pets.dogs[x]);
+    });
+  
 }
 
 module.exports = {userQueue,dogQueue,catQueue};
