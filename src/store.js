@@ -1,4 +1,4 @@
-module.exports ={ users:[
+let store={ users:[
 
 ],
 pets:{
@@ -38,6 +38,55 @@ pets:{
     breed: 'Golden Retriever',
     story: 'Owner Passed away'
   }],
-  cats:[]
+  cats:[{
+    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+    name: 'Fluffy',
+    sex: 'Female',
+    age: 2,
+    breed: 'Bengal',
+    story: 'Thrown on the street'
+  },
+  {
+    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+    name: 'Fluffy',
+    sex: 'Female',
+    age: 2,
+    breed: 'Bengal',
+    story: 'Thrown on the street'
+  },
+  {
+    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+    name: 'Fluffy',
+    sex: 'Female',
+    age: 2,
+    breed: 'Bengal',
+    story: 'Thrown on the street'
+  },
+  {
+    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+    name: 'Fluffy',
+    sex: 'Female',
+    age: 2,
+    breed: 'Bengal',
+    story: 'Thrown on the street'
+  }]
 }
 };
+
+let Queue = require('./queue');
+
+
+const userQueue = new Queue();
+
+const dogQueue = new Queue();
+const catQueue = new Queue();
+for(let x = 0; x < 4;x++){
+  catQueue.enqueue(store.pets.cats[x]);
+  dogQueue.enqueue(store.pets.dogs[x]);
+}
+
+module.exports = {userQueue,dogQueue,catQueue};

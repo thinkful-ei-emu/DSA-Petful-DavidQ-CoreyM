@@ -24,6 +24,7 @@ app.use(morgan(morganOptions));
 //route imports
 let dogRoute = require('./routes/dog.route');
 let catRoute = require('./routes/cat.route');
+let userRoute = require('./routes/users.route');
 
 
 //routes
@@ -32,5 +33,6 @@ app.get('/',(req,res)=>{
 });
 app.use('/api/dog',dogRoute);
 app.use('/api/cat',catRoute);
+app.use('/api/users',userRoute);
 
 module.exports = app;

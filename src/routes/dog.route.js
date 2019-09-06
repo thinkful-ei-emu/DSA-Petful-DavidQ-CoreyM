@@ -1,16 +1,10 @@
 let route = require('express').Router();
+let dogQueue = require('../store').dogQueue;
 
-let testData = {
-  imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-  imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-  name: 'Zeus',
-  sex: 'Male',
-  age: 3,
-  breed: 'Golden Retriever',
-  story: 'Owner Passed away'
-};
 module.exports  = route.get('/',(req,res)=>{
-
-  res.status(200).json(testData);
+  if(!dogQueue.peek())
+    return res.status(204).json({error:'no more dogs in the pound'});
+  else
+    return res.status(200).json(dogQueue.peek());
 
 });

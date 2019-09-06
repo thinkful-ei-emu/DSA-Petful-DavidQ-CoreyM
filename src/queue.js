@@ -11,12 +11,28 @@ module.exports = class Queue{
     this.length = 0;
 
   }
+  find(value){
+    //return int, how far away from fron of the line
+    //returns false if user is not found
+    //linear search, O(n)
+
+    let position = 0;
+    let n =  this.first;
+    while(n){
+     
+      position++;
+      if(n.value === value)
+        return position;
+      n = n._next;
+    }
+    return false;
+  }
   enqueue(value){
-    if(!this.first)
+    if(this.first === null)
       this.first = new _Node(value);
     else{
       let n = this.first;
-      while(!n._next){
+      while(n._next){
         n = n._next;
       }
       n._next = new _Node(value);
@@ -33,4 +49,7 @@ module.exports = class Queue{
       return first;
     }
   }
-}
+  peek(){
+    return this.first.value;
+  }
+};

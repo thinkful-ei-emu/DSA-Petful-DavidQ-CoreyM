@@ -26,3 +26,15 @@ Run the tests `npm test`
 ## Deploying
 
 When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+# Petful Server
+
+___
+
+# Routes
+## Dog
+>/api/dog returns next dog to be adpoted
+
+## Users
+> GET - /api/users/position return current position for that user
+
+> POST - /api/users add user to queue
