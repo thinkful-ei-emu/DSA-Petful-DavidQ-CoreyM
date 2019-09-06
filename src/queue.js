@@ -50,6 +50,9 @@ module.exports = class Queue{
     }
   }
   peek(){
-    return this.first.value;
+    if(this.first)
+      return this.first.value;
+    else
+      return  null;
   }
 };

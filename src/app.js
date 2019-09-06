@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 require('dotenv').config();
+const userQueue = require('./store').userQueue;
 
 const {NODE_ENV} = require('./config');
 
@@ -31,6 +32,11 @@ let userRoute = require('./routes/users.route');
 app.get('/',(req,res)=>{
   res.status(200).send('Hello World');
 });
+
+//timer for adoption
+let timer = setInterval(()=>{},30000);
+
+
 app.use('/api/dog',dogRoute);
 app.use('/api/cat',catRoute);
 app.use('/api/users',userRoute);
