@@ -9,4 +9,4 @@ module.exports  = route.get('/',(req,res)=>{
   else
     return res.status(200).json(catQ.peek());
 
-});
+}).get('/allcats',(req,res)=>res.json(require('../store').pets.cats));

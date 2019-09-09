@@ -1,20 +1,3 @@
-# a template for express servers
-# Express Boilerplate!
-
-This is a boilerplate project used for starting new projects!
-
-## Set up
-
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
-
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-(if you use Githubs `use template button`, skip this step)
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
-
 ## Scripts
 
 Start the application `npm start`
@@ -27,14 +10,29 @@ Run the tests `npm test`
 
 When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
 # Petful Server
+>_live At_ (David Queen11:39 AM
+https://blooming-badlands-93561.herokuapp.com/)[David Queen11:39 AM
+https://blooming-badlands-93561.herokuapp.com/]
+
+by David Q and Cory Moore
+
+This App is A FIFO adoption App, that matched dogs and/or cat to new owners
+
+TECH STACK:
+- NODEJS
+- EXPRESS
+- CORS
+- REACTJS
 
 ___
 
 # Routes
 ## Dog
 >/api/dog returns next dog to be adpoted
-
+# Cat
+>/api/cat returns next cat
 ## Users
-> GET - /api/users/position return current position for that user
+> GET - /api/users/position?user="NAME" return current position for that user
 
 > POST - /api/users add user to queue
+> POST - /api/Adopt marks pet as adopted reqs user and either 'dog' 'cat'
