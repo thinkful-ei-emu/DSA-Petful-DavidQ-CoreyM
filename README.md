@@ -10,11 +10,9 @@ Run the tests `npm test`
 
 When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
 # Petful Server
->_live At_ (David Queen11:39 AM
-https://blooming-badlands-93561.herokuapp.com/)[David Queen11:39 AM
-https://blooming-badlands-93561.herokuapp.com/]
+>_live At_ https://blooming-badlands-93561.herokuapp.com/
 
-by David Q and Cory Moore
+by [David Q](https://www.github.com/dcoollx) and [Corey Moore](https://www.github.com/monorthwest)
 
 This App is A FIFO adoption App, that matched dogs and/or cat to new owners
 
